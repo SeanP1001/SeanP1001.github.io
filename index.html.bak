@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Bio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Professional Bio</h1>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>My name is Sean Peters and I'm a motivated and enthusiastic individual with a passion for technology and problem-solving. I am currently pursuing an Associate of Applied Science in Networking Technology and an Associate of Applied Science in Computer Information, expecting to graduate in late 2024. Alongside my academic pursuits, I have gained practical experience as an IT technician in the R-IV School district, where I have been involved in various installations and network management tasks for the past 3 years.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Expected Graduation Date: Late 2024</li>
+                <li>Degree(s):
+                    <ul>
+                        <li>Associate of Applied Science in Networking Technology</li>
+                        <li>Associate of Applied Science in Computer Information</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Previous Classes Taken</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+						<th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CIS 230</td>
+                        <td>Systems Analysis & Design</td>
+						<td>App and system developement process</td>
+                    </tr>
+                    <tr>
+                        <td>CIS 171</td>
+                        <td>Java II</td>
+						<td>Java scripting and development</td>
+                    </tr>
+                    <tr>
+                        <td>ITI 216</td>
+                        <td>CCNAv7: ENSA</td>
+						<td>Implement Cisco routing and networking</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section id="experience">
+			<h2>Work Experience</h2>
+			<h3><strong>IT Technician R-IV School District</strong></h3> <!-- School district in bold -->
+				<ul>
+					<li>IP camera & speaker installs</li>
+					<li>Door security system integration</li>
+					<li>Fiber optic run installation</li>
+					<li>Sound system installations</li>
+					<li>Network & account management</li>
+					<li>1:1 device enrollment & repair</li>
+				</ul>
+		</section>
+
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>PC/Retro Gaming</li>
+                <li>Model Building</li>
+                <li>Light Reading</li>
+				<li>MTG Cards</li>
+				<li>RPG Player</li>
+            </ul>
+        </section>
+
+        <section id="aspirations">
+            <h2>Aspirations</h2>
+            <ul>
+                <li>Master key technical skills like programming and networking fundamentals.</li>
+                <li>Obtain industry-recognized certifications (e.g., CompTIA A+, Cisco CCNA, Microsoft Certified Azure Fundamentals).</li>
+                <li>Develop strong problem-solving abilities and analytical skills.</li>
+                <li>Stay updated on emerging technologies and industry trends.</li>
+                <li>Seek collaborative environments for learning and growth.</li>
+                <li>Explore specialized areas within IT (e.g., cybersecurity, cloud computing, data analytics).</li>
+                <li>Progress from entry-level to leadership roles through dedication and skill development.</li>
+            </ul>
+        </section>
+
+		<section id="contact">
+			<h2>Contact Me</h2>
+			<form id="contact-form">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" rows="4" required></textarea>
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sean Peters</p>
+    </footer>
+	
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p id="popup-message"></p>
+    </div>
+
+
+    <script> // Submit Pop-up notification 
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+		document.getElementById("contact-form").addEventListener("submit", function(event) {
+		event.preventDefault(); // Prevent default form submission
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var message = document.getElementById("message").value;
+		var popupMessage = "Your input\nName: " + name + "\nEmail: " + email + "\nMessage: " + message + "\n\nThank you for your interest!\nI will get back to you shortly.";
+		document.getElementById("popup-message").textContent = popupMessage;
+		document.getElementById("popup").style.display = "block"; // Show popup
+		clearForm(); // Clears form after submit
+		});
+
+        function clearForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>

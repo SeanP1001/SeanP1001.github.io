@@ -1,0 +1,199 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: 550;
+    line-height: 1.6;
+    background-image: url('Tech-Walld.jpg');
+    background-size: cover;
+    color: #fff; 
+}
+
+/* Header styling */
+header {
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+	color: #fff;
+    font-size: 36px;
+    font-weight: bold; 
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+section {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px; 
+    color: #14ccff; 
+	font-family: Verdana;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Footer styling */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Table styling */
+table {
+    width: 95%;
+	margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2.5px solid #fff;
+    padding: 12px; 
+}
+
+th {
+    background-color: #666262;
+    font-weight: bold; 
+}
+
+td {
+	font-family: Tahoma, Geneva, sans-serif;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#education h3{
+	color: #58f5ce;
+}
+
+/* Form & Button Styling */
+.form-group {
+    margin-bottom: 20px; 
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; 
+    color: #b5b7ba; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Button color */
+    color: #fff;
+    padding: 12px 24px; /* Button size */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hobbies & Aspiration List Styling */
+#hobbies ul,
+#aspirations ul, #education ul {
+    margin-left: 20px; 
+}
+
+#hobbies ul li,
+#aspirations ul li {
+    margin-bottom: 5px; 
+}
+
+#experience h3 {
+    font-weight: bold; 
+    margin-bottom: 10px; 
+	color: #58f5ce;
+}
+
+#experience ul {
+    margin-left: 20px; 
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 70px; /* Adjusted top position */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Centered horizontally */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 9999;
+    max-width: 80%; 
+    text-align: center; 
+    white-space: pre-line; /* Preserve line breaks */
+}
+
+/* Specific layout adjustments */
+#about,
+#education,
+#aspirations,
+#contact {
+    width: 100%; /* Set these sections to occupy full width */
+}
+
+#experience,
+#hobbies {
+    width: calc(50% - 20px); /* Set two sections as side by side */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    section #experience, #hobbies {
+        width: 100%; /* Occupy full width on smaller screens */
+    }
+
+    section {
+        text-align: center; /* Center-align text on smaller screens */
+    }
+	
+	#experience { /* Center "Work Experience" specifically on small screens */
+		margin: auto;
+	}
+	
+	body{
+		font-weight:500; /* Makes text not bold on smaller screens */
+	}
+}
